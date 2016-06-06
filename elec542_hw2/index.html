@@ -1,0 +1,191 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>lp_norms_in_3D_partial</title><meta name="generator" content="MATLAB 8.3"><link rel="schema.DC" href="//purl.org/dc/elements/1.1/"><meta name="DC.date" content="2015-04-23"><meta name="DC.source" content="lp_norms_in_3D_partial.m"><style type="text/css">
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}:focus{outine:0}ins{text-decoration:none}del{text-decoration:line-through}table{border-collapse:collapse;border-spacing:0}
+
+html { min-height:100%; margin-bottom:1px; }
+html body { height:100%; margin:0px; font-family:Arial, Helvetica, sans-serif; font-size:10px; color:#000; line-height:140%; background:#fff none; overflow-y:scroll; }
+html body td { vertical-align:top; text-align:left; }
+
+h1 { padding:0px; margin:0px 0px 25px; font-family:Arial, Helvetica, sans-serif; font-size:1.5em; color:#d55000; line-height:100%; font-weight:normal; }
+h2 { padding:0px; margin:0px 0px 8px; font-family:Arial, Helvetica, sans-serif; font-size:1.2em; color:#000; font-weight:bold; line-height:140%; border-bottom:1px solid #d6d4d4; display:block; }
+h3 { padding:0px; margin:0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:1.1em; color:#000; font-weight:bold; line-height:140%; }
+
+a { color:#005fce; text-decoration:none; }
+a:hover { color:#005fce; text-decoration:underline; }
+a:visited { color:#004aa0; text-decoration:none; }
+
+p { padding:0px; margin:0px 0px 20px; }
+img { padding:0px; margin:0px 0px 20px; border:none; }
+p img, pre img, tt img, li img, h1 img, h2 img { margin-bottom:0px; }
+
+ul { padding:0px; margin:0px 0px 20px 23px; list-style:square; }
+ul li { padding:0px; margin:0px 0px 7px 0px; }
+ul li ul { padding:5px 0px 0px; margin:0px 0px 7px 23px; }
+ul li ol li { list-style:decimal; }
+ol { padding:0px; margin:0px 0px 20px 0px; list-style:decimal; }
+ol li { padding:0px; margin:0px 0px 7px 23px; list-style-type:decimal; }
+ol li ol { padding:5px 0px 0px; margin:0px 0px 7px 0px; }
+ol li ol li { list-style-type:lower-alpha; }
+ol li ul { padding-top:7px; }
+ol li ul li { list-style:square; }
+
+.content { font-size:1.2em; line-height:140%; padding: 20px; }
+
+pre, code { font-size:12px; }
+tt { font-size: 1.2em; }
+pre { margin:0px 0px 20px; }
+pre.codeinput { padding:10px; border:1px solid #d3d3d3; background:#f7f7f7; }
+pre.codeoutput { padding:10px 11px; margin:0px 0px 20px; color:#4c4c4c; }
+pre.error { color:red; }
+
+@media print { pre.codeinput, pre.codeoutput { word-wrap:break-word; width:100%; } }
+
+span.keyword { color:#0000FF }
+span.comment { color:#228B22 }
+span.string { color:#A020F0 }
+span.untermstring { color:#B20000 }
+span.syscmd { color:#B28C00 }
+
+.footer { width:auto; padding:10px 0px; margin:25px 0px 0px; border-top:1px dotted #878787; font-size:0.8em; line-height:140%; font-style:italic; color:#878787; text-align:left; float:none; }
+.footer p { margin:0px; }
+.footer a { color:#878787; }
+.footer a:hover { color:#878787; text-decoration:underline; }
+.footer a:visited { color:#878787; }
+
+table th { padding:7px 5px; text-align:left; vertical-align:middle; border: 1px solid #d6d4d4; font-weight:bold; }
+table td { padding:7px 5px; text-align:left; vertical-align:top; border:1px solid #d6d4d4; }
+
+
+
+
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#2">Daniel Volz, Homework Assignment 02, ELEC 542, Spring 2015</a></li><li><a href="#3">Plots of different lp norms of vectors in R2</a></li><li><a href="#4">Set up the meshgrid that has the samples of x1 and x2 we will use.</a></li><li><a href="#5">We will generate four plots corresponding to different lp norms:</a></li><li><a href="#6">The plot of p = 2: the l2 norm is the Euclidean norm of x</a></li><li><a href="#7">The plot of p = 1: the l1 norm is the taxicab or Manhattan norm of x</a></li><li><a href="#8">The plot of p = 'a bigger number': approximating an linfinity norm or Chebyshev norm of x</a></li><li><a href="#9">The plot of p = 0.1</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> [ output_args ] = lp_norms_in_3D_partial( input_args )
+</pre><h2>Daniel Volz, Homework Assignment 02, ELEC 542, Spring 2015<a name="2"></a></h2><h2>Plots of different lp norms of vectors in R2<a name="3"></a></h2><p>Lots of times, the high dimensional spaces we work in are hard to visualize.  But this assignment helps with that visualization.  By making our vectors live in a two dimensional space, we can use the third dimension to plot things like the value a function takes over two dimensions.</p><p>In this case, we are looking at the different norms over a two dimensional space.  Let say that we are in R2 and our dimensions are x1 and x2.  In other words x = [x1 x2].  We use the general lp norm we saw in class.  In Matlab we can express this norm as follows:</p><pre class="language-matlab">||x|| = normOfx = ( abs(x1).^p + abs(x2).^p ).^(1/p)
+</pre><p>You should consult the class notes and verify for yourself that this does in fact correspond to the lp norm in R2.  We can selection different norms by varying the value of p.</p><p>The Matlab function surfc() is used to do the plot.  surfc() has the nice feature of showing us the 3D surface of <tt>|x</tt>| as well as the contour plots in the x1 x2 plane.  The contour plot let's us see the unit circles and smaller and larger versions of them as well.</p><p>If this is your first time to plot things in 3D in Matlab, this is a good starting example.  We use the function meshgrid() to generate a grid of points which are returned to us in x1 and x2.  Any corresponding values in x1 and x2, for example x1(3) and x2(3) define a point in R3.  So, we calculate the norm of x i.e. normOfx at all of these points.</p><p>Note of thanks: I (Ray) appreciate the feedback from you (the class) on this assignment.  It helped me pull this together quickly and it worked surprisingly well.  I bet that you will find it goes pretty smoothly for you too.  Good luck!</p><h2>Set up the meshgrid that has the samples of x1 and x2 we will use.<a name="4"></a></h2><pre class="codeinput">[x1, x2] = meshgrid(-2 : 0.1 : 2, -2 : 0.1 : 2);
+</pre><h2>We will generate four plots corresponding to different lp norms:<a name="5"></a></h2><pre>p = 2 The standard l2 norm of x.</pre><pre>p = 1 The l1 norm of x.</pre><pre>p = 'a bigger number' Approximating the linfinity norm of x.</pre><pre>p = 0.1 An option for you to pick one of your own.  Pseudo inverses i.e.
+     p &lt; 1 are acceptable.</pre><h2>The plot of p = 2: the l2 norm is the Euclidean norm of x<a name="6"></a></h2><pre class="codeinput">p = 2;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); <span class="comment">% Calculate the norm.</span>
+
+figure
+surfc(x1, x2, normOfx);
+
+<span class="comment">% Label the axes...</span>
+xlabel(<span class="string">'x1'</span>);
+ylabel(<span class="string">'x2'</span>);
+zlabel(<span class="string">'||x||'</span>);
+</pre><img vspace="5" hspace="5" src="lp_norms_in_3D_partial_01.png" alt=""> <h2>The plot of p = 1: the l1 norm is the taxicab or Manhattan norm of x<a name="7"></a></h2><pre class="codeinput">p = 1;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); <span class="comment">% Calculate the norm.</span>
+
+figure
+surfc(x1, x2, normOfx);
+</pre><img vspace="5" hspace="5" src="lp_norms_in_3D_partial_02.png" alt=""> <h2>The plot of p = 'a bigger number': approximating an linfinity norm or Chebyshev norm of x<a name="8"></a></h2><pre class="codeinput">p = 100;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); <span class="comment">% Calculate the norm.</span>
+
+figure
+surfc(x1, x2, normOfx);
+</pre><img vspace="5" hspace="5" src="lp_norms_in_3D_partial_03.png" alt=""> <h2>The plot of p = 0.1<a name="9"></a></h2><pre class="codeinput">p = 0.1;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); <span class="comment">% Calculate the norm.</span>
+
+figure
+surfc(x1, x2, normOfx);
+</pre><img vspace="5" hspace="5" src="lp_norms_in_3D_partial_04.png" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><p class="footer"><br><a href="//www.mathworks.com/products/matlab/">Published with MATLAB&reg; R2014a</a><br></p></div><!--
+##### SOURCE BEGIN #####
+function [ output_args ] = lp_norms_in_3D_partial( input_args )
+%% Daniel Volz, Homework Assignment 02, ELEC 542, Spring 2015
+%
+%% Plots of different lp norms of vectors in R2
+%
+% Lots of times, the high dimensional spaces we work in are hard to
+% visualize.  But this assignment helps with that visualization.  By
+% making our vectors live in a two dimensional space, we can use the third
+% dimension to plot things like the value a function takes over two
+% dimensions.
+%
+% In this case, we are looking at the different norms over a two
+% dimensional space.  Let say that we are in R2 and our dimensions are x1
+% and x2.  In other words x = [x1 x2].  We use the general lp norm we saw
+% in class.  In Matlab we can express this norm as follows:
+%
+%   ||x|| = normOfx = ( abs(x1).^p + abs(x2).^p ).^(1/p)
+%
+% You should consult the class notes and verify for yourself that this does
+% in fact correspond to the lp norm in R2.  We can selection different
+% norms by varying the value of p.
+%
+% The Matlab function surfc() is used to do the plot.  surfc() has the nice
+% feature of showing us the 3D surface of ||x|| as well as the contour
+% plots in the x1 x2 plane.  The contour plot let's us see the unit circles
+% and smaller and larger versions of them as well.
+%
+% If this is your first time to plot things in 3D in Matlab, this is a good
+% starting example.  We use the function meshgrid() to generate a grid of
+% points which are returned to us in x1 and x2.  Any corresponding values
+% in x1 and x2, for example x1(3) and x2(3) define a point in R3.  So, we
+% calculate the norm of x i.e. normOfx at all of these points.
+%
+% Note of thanks: I (Ray) appreciate the feedback from you (the class) on
+% this assignment.  It helped me pull this together quickly and it worked
+% surprisingly well.  I bet that you will find it goes pretty smoothly for
+% you too.  Good luck!
+
+%% Set up the meshgrid that has the samples of x1 and x2 we will use.
+[x1, x2] = meshgrid(-2 : 0.1 : 2, -2 : 0.1 : 2);
+
+%% We will generate four plots corresponding to different lp norms:
+%  p = 2 The standard l2 norm of x.
+%
+%  p = 1 The l1 norm of x.
+%
+%  p = 'a bigger number' Approximating the linfinity norm of x.
+%
+%  p = 0.1 An option for you to pick one of your own.  Pseudo inverses i.e.
+%       p < 1 are acceptable.
+
+%% The plot of p = 2: the l2 norm is the Euclidean norm of x
+
+p = 2;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); % Calculate the norm.
+
+figure
+surfc(x1, x2, normOfx);
+
+% Label the axes...
+xlabel('x1');
+ylabel('x2');
+zlabel('||x||');
+
+%% The plot of p = 1: the l1 norm is the taxicab or Manhattan norm of x
+
+p = 1;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); % Calculate the norm.
+
+figure
+surfc(x1, x2, normOfx);
+
+%% The plot of p = 'a bigger number': approximating an linfinity norm or Chebyshev norm of x
+
+p = 100;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); % Calculate the norm.
+
+figure
+surfc(x1, x2, normOfx);
+
+%% The plot of p = 0.1
+
+p = 0.1;
+normOfx = (abs(x1).^p + abs(x2).^p).^(1/p); % Calculate the norm.
+
+figure
+surfc(x1, x2, normOfx);
+
+end
+##### SOURCE END #####
+--></body></html>

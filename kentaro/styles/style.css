@@ -1,0 +1,77 @@
+#renan {
+    -webkit-animation: rotation 2s infinite linear;
+    position: relative;
+}
+
+@-webkit-keyframes rotation {
+    from {-webkit-transform: rotate(0deg);}
+    to   {-webkit-transform: rotate(359deg);}
+}
+
+body {
+  position: relative;
+  color: black;
+}
+
+#logo {
+  font-size: 90px;
+  font-family: Arial;
+}
+
+#logoWrapper {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   margin-top: -70px;
+}
+
+#score {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   margin-top: -40px;
+  font-size: 90px;
+  font-family: Arial;
+}
+
+#tip {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   font-family: Arial;
+}
+
+#sponsored {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+   font-style: italic;
+   font-family: Arial;
+}
+
+#musicPlayer {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+
+a {
+}
+a:link {
+    color: #666666;
+    text-decoration: none;
+}
+
+a:active {
+    color: #B73045;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #999999;
+    text-decoration: none;
+}
+a:hover {
+    color: #B73045;
+    text-decoration: none;
+}

@@ -1,0 +1,779 @@
+
+	html.touch .iphone-main-wrapper.animated {
+		display:none;
+	}
+	html.touch div.section.page1 p.description {
+
+font-size:50px;
+line-height:60px;
+text-align:center;
+margin-top:60px;
+margin-bottom:40px;
+}
+
+html.touch p.description {
+	text-align:center;
+font-size: 30px;
+line-height: 40px;
+width:100%;
+}
+	html.touch div.section .iphone-wrapper {
+		display:block;
+		margin:0 auto;
+		position:relative;
+		text-align:left;
+	}
+	html.touch div.section {
+		position:relative;
+		width:100%;
+		height:1100px;
+	}
+	html.touch div.section.page1 {
+
+	height: 1220px;
+}
+html.touch div.section.page2 .iphone-wrapper .slides {
+	background-color:#3489DA;
+}
+html.touch div.section.page3 .iphone-wrapper .slides {
+	background-color:#3489DA;
+}
+html.touch div.section.page5 .iphone-wrapper .slides {
+	background-color:#3489DA;
+}
+html.touch div.section.page5 .iphone-wrapper .slides img {
+	margin-left: -224px;
+}
+html.touch div.section.page6 .footer {
+position: relative;
+bottom: auto;
+width: 100%;
+background: none;
+margin-top: 100px;
+}
+html.touch div.section.page3 .iphone-wrapper {
+transform: rotate(90deg);
+-ms-transform: rotate(90deg); /* IE 9 */
+-webkit-transform: rotate(90deg); /* Safari and Chrome */
+margin-top:-150px;
+}
+html.touch div.section.page3 {
+	height:820px;
+}
+html.touch div.section.page6 {
+	height:980px;
+}
+html.touch div.section.page6 .footer {
+	font-size:30px;
+	text-align:center!important;
+}
+html.touch div.section.page6 .footer .block {
+	display:block;
+	text-align:center!important;
+
+	margin:0;
+	margin-bottom:40px;
+	width:100%;
+}
+html.touch div.section.page3 .header {
+	margin-top:-100px;
+}
+html.touch div.section.page4 .iphone-wrapper .slides {
+	background-color:#3489DA;
+}
+html.touch div.section.page1 .header {
+	padding-bottom:50px;
+}
+html.touch div.section.page1 .body .inner{
+		padding-top:0px;
+		margin-top:0px;
+		border-top:none;
+}
+
+	html.touch div.section .header {
+		padding:50px;
+		text-align:center;
+		padding-bottom:20px;
+	}
+	html.touch div.section .body .inner {
+		padding-top:70px;
+		margin-top:50px;
+	}
+	html.touch div.section .body {
+		width:800px;
+		margin:0 auto;
+		float:none;
+		text-align:center;
+	}
+	html.touch ul.bullets {
+		display:none;
+	}
+	html.touch div.arrow {
+		display:none;
+	}
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #3489DA;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+h1, h2, h3, h4 {
+	font-weight:300;
+}
+
+html {
+  height: 100%;
+}
+body {
+  padding: 0;
+  text-align: left;
+  font-family: 'open sans';
+  font-weight:300;
+  position: relative;
+  margin: 0;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  background: #dd9a1b;
+  color:#fff;
+
+}
+p.description, a {
+	color: #fff;
+}
+p.description {
+	font-size:21px;
+	line-height:40px;
+}
+a {
+	color:#fff;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+h2 {
+	font-size:50px;
+	line-height:60px;
+	margin:0;
+	margin-bottom:30px;
+}
+.main.wrapper {
+	width:1000px;
+	margin:0 auto;
+	padding:0;
+}
+.iphone-wrapper {
+	margin-top:30px;
+	margin-left:50px;
+	z-index:3;
+}
+
+.iphone, .iphone-wrapper {
+	width:320px;
+	height:677px;
+	position:absolute;
+	overflow:hidden;
+}
+.iphone-main-wrapper {
+	display:none;
+	margin:0 auto;
+	width:1000px;
+}
+.iphone {
+	background:url("../img/iphone-frame.png") no-repeat;
+	z-index:2;
+}
+.iphone-wrapper .slides {
+	width: 272px;
+	height: 479px;
+	overflow: hidden;
+	background-color: #78b0b5;
+	margin-top: 102px;
+	display: inline-block;
+	margin-left: 27px;
+	-webkit-transition: all 0.7s ease-out;
+	-moz-transition: all 0.7s ease-out;
+	-o-transition: all 0.7s ease-out;
+	transition: all 0.7s ease-out;
+}
+.iphone-wrapper .slides img {
+	position:absolute;
+	display:none;
+}
+.iphone-wrapper .slides img.active {
+	display:block;
+}
+div.section.page1 p.description {
+	font-size:50px;
+	line-height:60px;
+	text-align:left;
+	margin-top:60px;
+	margin-bottom:40px;
+}
+div.section.page1 .header {
+
+}
+div.section.page1 .header h1 {
+	text-indent:-1000000px;
+	margin:0;
+}
+div.section.page1 .body {
+	width:550px;
+	float:right;
+	height:425px;
+}
+div.section.page2 .body {
+	width:400px;
+	height:300px;
+}
+
+div.section.page3 .body, div.section.page4 .body {
+	width:670px;
+	text-align:center;
+	margin:0 auto;
+}
+div.section.page3 .body {
+	height:600px;
+}
+div.section.page4 .body {
+	height:820px!important;
+}
+div.section.page4 .body .inner {
+	padding-top:30px;
+}
+div.section.page6 .body {
+	height:500px;
+	text-align:center;
+}
+div.section.page6 .body .header {
+	margin-bottom:60px;
+	margin-top:40px;
+}
+div.section.page5 .body {
+	height:180px;
+	width:560px;
+	float:right;
+}
+div.section.page3 .body .inner {
+	padding-top:380px;
+}
+div.themes-wrapper {
+	position:absolute;
+	margin-left: 533px;
+	z-index:1;
+	width: 790px;
+	display:none;
+	overflow:hidden;
+}
+div.themes-inner-wrapper {
+	width:2000px;
+}
+
+div.themes-wrapper .theme {
+	width:160px;
+	height:316px;
+	background:#e65b5b;
+	display:inline-block;
+	margin-right:30px;
+	border-radius:8px;
+}
+div.footer {
+	height:216px;
+	background: black;
+	position:fixed;
+	width:100%;
+	bottom:-216px;
+	left:0;
+	text-align:center;
+}
+div.footer a {
+	font-size:16px;
+}
+div.footer section {
+	width:300px;
+	display:inline-block;
+	vertical-align:top;
+}
+div.footer section.mail, div.footer section.follow {
+	margin:30px;
+}
+div.footer section h4 {
+	margin:0 auto;
+	margin-bottom:16px;
+}
+div.footer section.mail h4 {
+	text-indent:-1000000px;
+	width:200px;
+	height:20px;
+	background:url("../img/mailus.png") no-repeat center center;
+}
+div.footer section.mail a {
+	line-height:47px
+}
+div.footer section.follow h4 {
+	text-indent:-1000000px;
+	width:200px;
+	height:20px;
+	background:url("../img/followus.png") no-repeat center;
+}
+div.footer section.links {
+	display:block;
+	border-top:1px solid #353b4a;
+	width:100%;
+	text-align:center;
+	line-height:64px;
+}
+div.footer section.links a {
+	color: white;
+	text-decoration:none;
+	opacity:0.34;
+}
+div.footer section.links a:hover {
+	opacity:1;
+	text-decoration:underline;
+}
+ul.bullets {
+	position:fixed;
+	right:20px;
+	top:45%;
+	width:20px;
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+	z-index: 10;
+}
+ul.bullets li {
+	display:block;
+	width:4px;
+	height:4px;
+	margin: 20px auto;
+	background:url("../img/bullet.png") no-repeat;
+}
+ul.bullets li.active {
+	width:8px;
+	height:8px;
+	background:url("../img/active-bullet.png") no-repeat;
+}
+div.arrow {
+	width:100%;
+	background:url("../img/arrow.png") no-repeat center center;
+	height:30px;
+	bottom:20px;
+	left:0;
+	position:fixed;
+}
+div.footer .block.links a {
+	display:inline-block;
+	padding:0 20px;
+	color: white;
+}
+div.footer .block.follow a {
+	width:50px;
+	height:50px;
+	line-height: 48px;
+	border-radius:25px;
+	background-color:rgba(255, 255, 255, 0.21);
+	display:inline-block;
+	font-size:16px;
+	color:#fff;
+	margin:0 4px;
+	opacity:0.7;
+}
+div.footer .block.follow a:hover {
+	opacity:1.0;
+}
+div.section .iphone-wrapper {
+	display:none;
+}
